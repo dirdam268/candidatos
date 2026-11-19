@@ -1,0 +1,19 @@
+.DS_Store
+*.log
+
+# Fuente en claro y datos de origen (NO publicar)
+index-src.html
+construir.ps1
+
+plantilla.html
+puerta.html
+
+
+*.xlsx
+serve.ps1
+gen-icons.ps1
+README.md
+servidor.txt
+clave-servidor.txt
+cloudflare-token.txt
+worker/
