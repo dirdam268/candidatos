@@ -1,4 +1,4 @@
-﻿const CACHE_NAME = 'candidatos-franquicia-v1';
+﻿const CACHE_NAME = 'candidatos-franquicia-v2';
 const PRECACHE = ['./', './index.html', './manifest.json', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (event) => {
@@ -24,7 +24,7 @@ self.addEventListener('fetch', (event) => {
 
   if (req.mode === 'navigate') {
     event.respondWith(
-      fetch(req)
+      fetch(req, { cache: 'no-store' })
         .then((res) => { caches.open(CACHE_NAME).then((c) => c.put(req, res.clone())); return res; })
         .catch(() => caches.match('./index.html'))
     );
